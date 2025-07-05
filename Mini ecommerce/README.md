@@ -1,10 +1,60 @@
 # Mini Ecommerce
 
-Proyecto de Mini Ecommerce para gestión y sorteo de productos, desarrollado por Orlando y Alexis.
+Proyecto de Mini Ecommerce para sorteo y gestión de productos, desarrollado por Orlando y Alexis.
 
 ---
 
-## Tabla de Actividades y Estado
+## 1. Planeación de Actividades
+
+### Actividades y Responsables
+
+| # | Actividad                                                                 | Responsable | Estado     |
+|---|--------------------------------------------------------------------------|-------------|------------|
+| 1 | Elaborar la planeación de actividades para el desarrollo del proyecto    | Orlando     | Completado |
+| 2 | Definición de la tecnología para Front, Back y BD                        | Alexis      | Completado |
+| 3 | Crear un repositorio en Git                                              | Orlando     | Completado |
+| 4 | Subir el proyecto al repositorio                                         | Orlando     | Completado |
+| 5 | Desarrollar el proyecto correspondiente al sorteo                        | Alexis      | En progreso|
+| 6 | Desplegarlo para presentación                                            | Orlando     | Pendiente  |
+
+---
+
+## 2. Definición de Tecnología
+
+- **Frontend:** HTML, CSS
+- **Backend:** JavaScript
+- **Base de Datos:** LocalStorage (navegador)
+
+---
+
+## 3. Instrucciones para Subir el Proyecto a GitHub
+
+1. Crear un repositorio en GitHub (Responsable: Orlando)
+2. Clonar el repositorio en local
+3. Subir los archivos del proyecto (`index.html`, `style.css`, `script.js`, `productos_ejemplo.json`, `pago.html`)
+4. Hacer commit y push de los cambios
+
+---
+
+## 4. Descripción del Proyecto
+
+Mini ecommerce que permite:
+- Registrar productos con imagen/icono SVG atractivo
+- Agregar productos al carrito
+- Simular pago en ventana emergente
+- Filtrar y buscar productos
+- Exportar/importar productos en JSON
+
+---
+
+## 5. Despliegue para Presentación
+
+- El proyecto puede ser desplegado en GitHub Pages o en un servidor local (XAMPP, Live Server, etc.)
+- Para abrir el proyecto, basta con abrir `index.html` en el navegador
+
+---
+
+## 6. Lista de Actividades Priorizadas
 
 | Prioridad | Tarea                                                        | Descripción                                                      | Responsable | Estado      |
 |-----------|--------------------------------------------------------------|------------------------------------------------------------------|-------------|-------------|
@@ -13,7 +63,7 @@ Proyecto de Mini Ecommerce para gestión y sorteo de productos, desarrollado por
 | Alta      | Crear y configurar repositorio Git                           | Crear repo, subir archivos iniciales                             | Orlando     | Completado  |
 | Alta      | Subir proyecto al repositorio                                | Hacer commit y push de los archivos                              | Orlando     | Completado  |
 | Alta      | Desarrollo de funcionalidades principales                    | CRUD productos, carrito, pago, filtros, import/export            | Alexis      | En progreso |
-| Media     | Mejorar UI/UX e iconografía                                  | Usar SVGs atractivos, mejorar estilos                            | Alexis      | En progreso |
+| Media     | Mejorar UI/UX e iconografía                                 | Usar SVGs atractivos, mejorar estilos                            | Alexis      | En progreso |
 | Media     | Pruebas y validación                                         | Probar funcionalidades, corregir bugs                            | Ambos       | Pendiente   |
 | Media     | Despliegue para presentación                                 | Subir a GitHub Pages o servidor local                            | Orlando     | Pendiente   |
 | Baja      | Documentación y README                                       | Redactar README, instrucciones y lista de tareas                 | Orlando     | En progreso |
@@ -21,124 +71,16 @@ Proyecto de Mini Ecommerce para gestión y sorteo de productos, desarrollado por
 
 ---
 
-## Tecnologías Utilizadas
+## 7. Cómo Ejecutar el Proyecto
 
-- **Frontend:** HTML5, CSS3, JavaScript (puro)
-- **Persistencia:** LocalStorage del navegador
-- **Sin dependencias externas**
-
----
-
-## Estructura del Proyecto
-
-```
-Mini ecommerce/
-  ├── index.html                # Página principal
-  ├── pago.html                 # Ventana de pago simulada
-  ├── script.js                 # Lógica JS principal
-  ├── style.css                 # Estilos CSS
-  ├── productos_ejemplo.json    # Archivo de ejemplo para importar productos
-  └── README.md                 # Este archivo
-```
+1. Clona el repositorio
+2. Abre `index.html` en tu navegador
+3. Para simular un pago, haz clic en "Pagar" y llena el formulario en la ventana emergente
+4. Puedes importar productos usando el archivo `productos_ejemplo.json`
 
 ---
 
-## Funcionalidades Principales
-
-- Registrar, editar y eliminar productos (CRUD)
-- Cargar imagen (SVG/base64) y descripción
-- Carrito de compras con resumen y total
-- Simulación de pago en ventana emergente
-- Filtros por categoría, búsqueda y rango de precio
-- Exportar/importar productos en formato JSON
-- Estadísticas de inventario (total, por categoría, bajo stock, valor total)
-
----
-
-## Instrucciones de Uso
-
-1. **Clona o descarga el repositorio**
-2. Abre `index.html` en tu navegador (no requiere servidor, pero puedes usar Live Server, XAMPP, etc.)
-3. Agrega productos, usa el carrito y prueba la simulación de pago
-4. Para importar productos, usa el botón de importar y selecciona un archivo JSON (ejemplo: `productos_ejemplo.json`)
-5. Para exportar, usa el botón de exportar y descarga el archivo JSON
-
----
-
-## Validaciones y Mensajes de Error
-
-El sistema muestra mensajes claros al usuario en los siguientes casos:
-- Al intentar eliminar un producto: confirmación (`confirm`)
-- Al importar productos: alerta si el archivo no es válido o está vacío
-- Al intentar pagar con el carrito vacío: alerta
-- En el formulario de pago:
-  - Número de tarjeta inválido
-  - Formato de fecha inválido
-  - CVV inválido
-  - Nombre del titular inválido
-  - No seleccionar tipo de tarjeta
-  - Pago exitoso (mensaje de confirmación)
-- Al intentar guardar un producto sin completar los campos obligatorios
-- Al procesar imágenes con error
-- Al importar productos exitosamente o con error de formato
-
-Todos los mensajes se muestran mediante `alert` o `confirm` para asegurar la visibilidad.
-
----
-
-## Pruebas Sugeridas
-
-- Agregar, editar y eliminar productos
-- Agregar productos al carrito y simular pago
-- Probar filtros de búsqueda, categoría y precio
-- Exportar e importar productos (usando el archivo de ejemplo)
-- Validar mensajes de error en los formularios
-- Probar en diferentes navegadores (Chrome, Firefox, Edge)
-
----
-
-## Despliegue para Presentación
-
-- **GitHub Pages:** Sube la carpeta del proyecto y configura la rama principal como página web
-- **Servidor local:** Puedes usar XAMPP, Live Server (VSCode) o simplemente abrir `index.html` en el navegador
-
----
-
-## Demo o Video de Presentación
-
-Para grabar una demo del proyecto, se recomienda:
-- Usar [OBS Studio](https://obsproject.com/) (gratis y multiplataforma)
-- Alternativas: Screen Recorder de Windows, QuickTime (Mac), extensiones de Chrome
-- Mostrar: registro de productos, uso del carrito, simulación de pago, filtros, import/export
-
----
-
-## Formato de Importación de Productos
-
-El archivo debe ser un array de objetos con la siguiente estructura:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Nombre del producto",
-    "price": "Precio",
-    "image": "data:image/svg+xml;base64,...",
-    "description": "Descripción",
-    "stock": 10,
-    "category": "Categoría"
-  }
-]
-```
-Puedes usar y modificar `productos_ejemplo.json` incluido en el proyecto.
-
----
-
-## Créditos
+## 8. Créditos
 
 - Orlando
-- Alexis
-
----
-
-¡Gracias por usar Mini Ecommerce! Si tienes dudas o sugerencias, abre un issue o contacta a los responsables. 
+- Alexis 
