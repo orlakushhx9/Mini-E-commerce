@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Camiseta Básica de Algodón",
+    "price": "25.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzI3QUU2MCIvPjxwYXRoIGQ9Ik0yMCAyM0wzMiAxM0w0NCAyM0w1NSA1M0w0OSA1M0w0NSA0M0wzMiAzM0wyMCA0M0wxNSA1M0w5IDUzTDIwIDIzWiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==",
+    "description": "Camiseta cómoda de algodón 100%, perfecta para uso diario. Disponible en varios colores.",
+    "stock": 15,
+    "category": "Ropa"
+  },
+  {
+    "id": 2,
+    "name": "Jeans Clásicos",
+    "price": "59.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzE5NzZEMiIvPjxwYXRoIGQ9Ik0yMCAyM0wzMiAxM0w0NCAyM0w1NSA1M0w0OSA1M0w0NSA0M0wzMiAzM0wyMCA0M0wxNSA1M0w5IDUzTDIwIDIzWiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==",
+    "description": "Jeans de alta calidad con corte clásico, ideales para cualquier ocasión.",
+    "stock": 8,
+    "category": "Ropa"
+  },
+  {
+    "id": 3,
+    "name": "Vestido Elegante",
+    "price": "89.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iI0YwNjNCQyIvPjxwYXRoIGQ9Ik0zMiAxM0w0NSA0M0w0OSA1M0w1NSA1M0w0NCAyM0wzMiAxM0wyMCAyM0wxNSA1M0w5IDUzTDIwIDIzWiIgZmlsbD0iI0Q4M0JBNiIvPjwvc3ZnPg==",
+    "description": "Vestido elegante perfecto para eventos especiales. Diseño moderno y cómodo.",
+    "stock": 5,
+    "category": "Ropa"
+  },
+  {
+    "id": 4,
+    "name": "Smartphone Galaxy S23",
+    "price": "899.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzAwMCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjEwIiBmaWxsPSIjRkZGIi8+PHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMzMzIi8+PC9zdmc+",
+    "description": "Smartphone de última generación con cámara de 108MP y batería de larga duración.",
+    "stock": 12,
+    "category": "Electrónica"
+  },
+  {
+    "id": 5,
+    "name": "Laptop HP Pavilion",
+    "price": "1299.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik0xNiA0OEg0OEwxNiA0OFoiIGZpbGw9IiMzMzMiLz48cGF0aCBkPSJNMTYgNDhIMzJMMTYgNDhaIiBmaWxsPSIjRkZGIi8+PC9zdmc+",
+    "description": "Laptop potente con procesador Intel i7, 16GB RAM y SSD de 512GB. Ideal para trabajo y gaming.",
+    "stock": 7,
+    "category": "Electrónica"
+  },
+  {
+    "id": 6,
+    "name": "Auriculares Bluetooth",
+    "price": "79.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzI3QUU2MCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjEwIiBmaWxsPSIjRkZGIi8+PHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMzMzIi8+PC9zdmc+",
+    "description": "Auriculares inalámbricos con cancelación de ruido y 30 horas de batería.",
+    "stock": 20,
+    "category": "Electrónica"
+  },
+  {
+    "id": 7,
+    "name": "Tenis Deportivos Nike",
+    "price": "129.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzI3QUU2MCIvPjxwYXRoIGQ9Ik0xNiA0OEg0OEwxNiA0OFoiIGZpbGw9IiMwMDAiLz48cGF0aCBkPSJNMTYgNDhIMzJMMTYgNDhaIiBmaWxsPSIjRkZGIi8+PC9zdmc+",
+    "description": "Tenis deportivos con tecnología Air Max para máximo confort durante el ejercicio.",
+    "stock": 10,
+    "category": "Calzado"
+  },
+  {
+    "id": 8,
+    "name": "Zapatos Formales",
+    "price": "149.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzlGOTk5RiIvPjxwYXRoIGQ9Ik0xNiA0OEg0OEwxNiA0OFoiIGZpbGw9IiMwMDAiLz48cGF0aCBkPSJNMTYgNDhIMzJMMTYgNDhaIiBmaWxsPSIjRkZGIi8+PC9zdmc+",
+    "description": "Zapatos formales de cuero genuino, perfectos para la oficina y eventos importantes.",
+    "stock": 6,
+    "category": "Calzado"
+  },
+  {
+    "id": 9,
+    "name": "Sandalias de Verano",
+    "price": "39.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iI0ZGRjYwMCIvPjxwYXRoIGQ9Ik0xNiA0OEg0OEwxNiA0OFoiIGZpbGw9IiMwMDAiLz48cGF0aCBkPSJNMTYgNDhIMzJMMTYgNDhaIiBmaWxsPSIjRkZGIi8+PC9zdmc+",
+    "description": "Sandalias cómodas y elegantes, ideales para el verano y la playa.",
+    "stock": 25,
+    "category": "Calzado"
+  },
+  {
+    "id": 10,
+    "name": "Reloj Inteligente",
+    "price": "299.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIyMCIgZmlsbD0iIzI3QUU2MCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjEwIiBmaWxsPSIjRkZGIi8+PHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMzMzIi8+PC9zdmc+",
+    "description": "Smartwatch con monitor de frecuencia cardíaca, GPS y resistencia al agua.",
+    "stock": 8,
+    "category": "Accesorios"
+  },
+  {
+    "id": 11,
+    "name": "Bolso de Cuero",
+    "price": "199.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzg3N0Y2QyIvPjxwYXRoIGQ9Ik0yMCAyM0wzMiAxM0w0NCAyM0w1NSA1M0w0OSA1M0w0NSA0M0wzMiAzM0wyMCA0M0wxNSA1M0w5IDUzTDIwIDIzWiIgZmlsbD0iIzQ0MzQzNCIvPjwvc3ZnPg==",
+    "description": "Bolso elegante de cuero genuino con múltiples compartimentos y diseño atemporal.",
+    "stock": 4,
+    "category": "Accesorios"
+  },
+  {
+    "id": 12,
+    "name": "Gafas de Sol",
+    "price": "89.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjMyIiByPSIxMCIgZmlsbD0iIzI3QUU2MCIvPjxjaXJjbGUgY3g9IjQ4IiBjeT0iMzIiIHI9IjEwIiBmaWxsPSIjRkZGIi8+PHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMzMzIi8+PC9zdmc+",
+    "description": "Gafas de sol polarizadas con protección UV 400 y marco resistente.",
+    "stock": 15,
+    "category": "Accesorios"
+  },
+  {
+    "id": 13,
+    "name": "Sofá de 3 Plazas",
+    "price": "899.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzg3N0Y2QyIvPjxwYXRoIGQ9Ik0yMCAyM0wzMiAxM0w0NCAyM0w1NSA1M0w0OSA1M0w0NSA0M0wzMiAzM0wyMCA0M0wxNSA1M0w5IDUzTDIwIDIzWiIgZmlsbD0iIzQ0MzQzNCIvPjwvc3ZnPg==",
+    "description": "Sofá cómodo y elegante, perfecto para la sala de estar. Material resistente y fácil de limpiar.",
+    "stock": 3,
+    "category": "Hogar"
+  },
+  {
+    "id": 14,
+    "name": "Lámpara de Mesa",
+    "price": "79.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzI3QUU2MCIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjEwIiBmaWxsPSIjRkZGIi8+PHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMzMzIi8+PC9zdmc+",
+    "description": "Lámpara de mesa moderna con luz LED ajustable y diseño minimalista.",
+    "stock": 12,
+    "category": "Hogar"
+  },
+  {
+    "id": 15,
+    "name": "Juego de Sábanas",
+    "price": "49.99",
+    "image": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxMiIgZmlsbD0iIzI3QUU2MCIvPjxwYXRoIGQ9Ik0yMCAyM0wzMiAxM0w0NCAyM0w1NSA1M0w0OSA1M0w0NSA0M0wzMiAzM0wyMCA0M0wxNSA1M0w5IDUzTDIwIDIzWiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==",
+    "description": "Juego de sábanas de algodón egipcio 100%, suaves y transpirables. Incluye funda y sábana ajustable.",
+    "stock": 18,
+    "category": "Hogar"
+  }
+] 

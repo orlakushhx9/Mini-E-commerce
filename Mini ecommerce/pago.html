@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pago con Tarjeta</title>
+  <meta name="viewport" content="width=500, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #f4f6fb;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .pago-container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #b0b8c9;
+      padding: 32px 28px 24px 28px;
+      margin-top: 40px;
+      min-width: 370px;
+      max-width: 420px;
+      width: 100%;
+    }
+    .pago-title {
+      font-size: 1.5rem;
+      color: #2a4d8f;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pago-total {
+      font-size: 1.1rem;
+      color: #27ae60;
+      font-weight: bold;
+      margin-bottom: 18px;
+      text-align: right;
+    }
+    .close-pago {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      font-size: 2rem;
+      color: #888;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.2s;
+      background: none;
+      border: none;
+    }
+    .close-pago:hover {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="pago-container" style="position:relative;">
+    <button class="close-pago" id="closePago">&times;</button>
+    <div class="pago-title">💳 Información de Pago</div>
+    <div class="pago-total">Total a pagar: $<span id="paymentTotal">0</span></div>
+    <div class="card-visual">
+      <div class="card-front">
+        <div class="card-chip"></div>
+        <div class="card-number" id="visualCardNumber">•••• •••• •••• ••••</div>
+        <div class="card-details">
+          <span id="visualCardHolder">NOMBRE DEL TITULAR</span>
+          <span id="visualCardExpiry">MM/AA</span>
+        </div>
+        <div class="card-type" id="visualCardType"></div>
+      </div>
+    </div>
+    <form id="paymentForm" autocomplete="off">
+      <div class="form-group">
+        <label>Número de Tarjeta:</label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Fecha de Vencimiento:</label>
+          <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5" required>
+        </div>
+        <div class="form-group">
+          <label>CVV:</label>
+          <input type="text" id="cardCvv" placeholder="123" maxlength="3" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Nombre del Titular:</label>
+        <input type="text" id="cardHolder" placeholder="Juan Pérez" required>
+      </div>
+      <div class="form-group">
+        <label>Tipo de Tarjeta:</label>
+        <select id="cardType" required>
+          <option value="">Selecciona una tarjeta</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </div>
+      <div class="payment-actions">
+        <button type="button" id="cancelPayment" style="background:#e74c3c;color:#fff;">Cancelar</button>
+        <button type="submit" id="processPayment" style="background:#27ae60;color:#fff;">Procesar Pago</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Lee el total de la URL
+    const params = new URLSearchParams(window.location.search);
+    const total = params.get('total') || '0.00';
+    document.getElementById('paymentTotal').textContent = total;
+
+    // Tarjeta visual en tiempo real
+    const cardNumber = document.getElementById('cardNumber');
+    const cardHolder = document.getElementById('cardHolder');
+    const cardExpiry = document.getElementById('cardExpiry');
+    const cardType = document.getElementById('cardType');
+    const visualCardNumber = document.getElementById('visualCardNumber');
+    const visualCardHolder = document.getElementById('visualCardHolder');
+    const visualCardExpiry = document.getElementById('visualCardExpiry');
+    const visualCardType = document.getElementById('visualCardType');
+
+    cardNumber.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim();
+      visualCardNumber.textContent = value.padEnd(19, '•');
+      if (value.startsWith('4')) visualCardType.textContent = 'VISA';
+      else if (value.startsWith('5')) visualCardType.textContent = 'MASTERCARD';
+      else if (value.startsWith('3')) visualCardType.textContent = 'AMEX';
+      else visualCardType.textContent = '';
+    });
+    cardHolder.addEventListener('input', function(e) {
+      visualCardHolder.textContent = e.target.value.toUpperCase() || 'NOMBRE DEL TITULAR';
+    });
+    cardExpiry.addEventListener('input', function(e) {
+      visualCardExpiry.textContent = e.target.value || 'MM/AA';
+    });
+    cardType.addEventListener('change', function(e) {
+      visualCardType.textContent = e.target.selectedOptions[0].text.toUpperCase();
+    });
+
+    // Cerrar ventana
+    document.getElementById('closePago').onclick = function() {
+      window.close();
+    };
+    document.getElementById('cancelPayment').onclick = function() {
+      window.close();
+    };
+
+    // Simulación de pago
+    document.getElementById('paymentForm').onsubmit = function(e) {
+      e.preventDefault();
+      const cardNum = cardNumber.value.replace(/\s/g, '');
+      const expiry = cardExpiry.value;
+      const cvv = document.getElementById('cardCvv').value;
+      const holder = cardHolder.value.trim();
+      const type = cardType.value;
+      if (cardNum.length < 13 || cardNum.length > 19) {
+        alert('Número de tarjeta inválido');
+        return;
+      }
+      if (!expiry.match(/^\d{2}\/\d{2}$/)) {
+        alert('Formato de fecha inválido (MM/AA)');
+        return;
+      }
+      if (cvv.length < 3) {
+        alert('CVV inválido');
+        return;
+      }
+      if (holder.length < 3) {
+        alert('Nombre del titular inválido');
+        return;
+      }
+      if (!type) {
+        alert('Selecciona un tipo de tarjeta');
+        return;
+      }
+      document.getElementById('processPayment').textContent = '⏳ Procesando...';
+      document.getElementById('processPayment').disabled = true;
+      setTimeout(() => {
+        alert('✅ ¡Pago procesado exitosamente!\n\nGracias por tu compra.');
+        window.close();
+      }, 1800);
+    };
+  </script>
+</body>
+</html> 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini E-commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mini E-commerce</h1>
+    <input type="text" id="search" placeholder="Buscar producto...">
+    <select id="filterCategory">
+      <option value="">Todas las categorías</option>
+      <option value="Ropa">Ropa</option>
+      <option value="Electrónica">Electrónica</option>
+      <option value="Calzado">Calzado</option>
+      <option value="Accesorios">Accesorios</option>
+      <option value="Hogar">Hogar</option>
+    </select>
+    <div class="price-filter">
+      <input type="number" id="minPrice" placeholder="Precio mínimo" min="0">
+      <input type="number" id="maxPrice" placeholder="Precio máximo" min="0">
+    </div>
+    <div id="cart">🛒 Carrito (<span id="cartCount">0</span>)</div>
+  </header>
+
+  <main id="productList"></main>
+  <button id="loadMore">Cargar más</button>
+
+  <aside id="cartSummary" class="hidden">
+    <h2>Resumen del carrito</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <div class="cart-actions">
+      <button id="closeCart">Cerrar</button>
+      <button id="checkoutBtn" class="checkout-btn">💳 Pagar</button>
+    </div>
+  </aside>
+
+  <div id="productModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle">Registrar producto</h2>
+      <form id="productForm">
+        <label>Nombre:<br><input type="text" id="productName" required></label><br><br>
+        <label>Precio:<br><input type="number" id="productPrice" min="0" step="0.01" required></label><br><br>
+        <label>Imagen del producto:<br><input type="file" id="productImage" accept="image/*" required></label><br>
+        <div id="imagePreview" class="image-preview hidden"></div><br>
+        <label>Descripción:<br><textarea id="productDescription" rows="3" placeholder="Describe tu producto..."></textarea></label><br><br>
+        <label>Stock disponible:<br><input type="number" id="productStock" min="0" value="1" required></label><br><br>
+        <label>Categoría:<br>
+          <select id="productCategory" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="Ropa">Ropa</option>
+            <option value="Electrónica">Electrónica</option>
+            <option value="Hogar">Hogar</option>
+            <option value="Calzado">Calzado</option>
+            <option value="Accesorios">Accesorios</option>
+          </select>
+        </label><br><br>
+        <button type="submit" id="saveProductBtn">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+  <button id="addProductBtn" title="Registrar producto nuevo">+</button>
+  
+  <!-- Botón de estadísticas -->
+  <button id="statsBtn" title="Ver estadísticas">📊</button>
+  
+  <!-- Botón de exportar/importar -->
+  <button id="dataBtn" title="Exportar/Importar datos">💾</button>
+  
+  <!-- Modal de Estadísticas -->
+  <div id="statsModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeStatsModal" class="close">&times;</span>
+      <h2>📊 Estadísticas del Inventario</h2>
+      <div id="statsContent">
+        <div class="stat-card">
+          <h3>Total de Productos</h3>
+          <p id="totalProducts">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Productos por Categoría</h3>
+          <div id="categoryStats"></div>
+        </div>
+        <div class="stat-card">
+          <h3>Productos con Stock Bajo</h3>
+          <p id="lowStockProducts">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Valor Total del Inventario</h3>
+          <p id="totalValue">$0.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de Exportar/Importar -->
+  <div id="dataModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeDataModal" class="close">&times;</span>
+      <h2>💾 Exportar/Importar Datos</h2>
+      <div class="data-actions">
+        <div class="export-section">
+          <h3>Exportar Productos</h3>
+          <p>Descarga todos tus productos en formato JSON</p>
+          <button id="exportBtn">📥 Exportar</button>
+        </div>
+        <div class="import-section">
+          <h3>Importar Productos</h3>
+          <p>Sube un archivo JSON con productos</p>
+          <input type="file" id="importFile" accept=".json">
+          <button id="importBtn">📤 Importar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
