@@ -679,7 +679,6 @@ function importProducts(file) {
         importedProducts.forEach((product, index) => {
           product.id = maxId + index + 1;
         });
-        
         products = [...products, ...importedProducts];
         saveProducts();
         applyFilters();
