@@ -67,7 +67,6 @@ Mini ecommerce que permite:
 | Media     | Pruebas y validación                                         | Probar funcionalidades, corregir bugs                            | Ambos       | Pendiente   |
 | Media     | Despliegue para presentación                                 | Subir a GitHub Pages o servidor local                            | Orlando     | Pendiente   |
 | Baja      | Documentación y README                                       | Redactar README, instrucciones y lista de tareas                 | Orlando     | En progreso |
-| Baja      | Video o demo para presentación                               | Grabar o preparar demo para mostrar el proyecto                  | Ambos       | Pendiente   |
 
 ---
 
