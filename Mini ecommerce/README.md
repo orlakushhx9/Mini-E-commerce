@@ -14,8 +14,8 @@ Proyecto de Mini Ecommerce para sorteo y gestión de productos, desarrollado por
 | 2 | Definición de la tecnología para Front, Back y BD                        | Alexis      | Completado |
 | 3 | Crear un repositorio en Git                                              | Orlando     | Completado |
 | 4 | Subir el proyecto al repositorio                                         | Orlando     | Completado |
-| 5 | Desarrollar el proyecto correspondiente al sorteo                        | Alexis      | En progreso|
-| 6 | Desplegarlo para presentación                                            | Orlando     | Pendiente  |
+| 5 | Desarrollar el proyecto correspondiente al sorteo                        | Alexis      | Completado|
+| 6 | Desplegarlo para presentación                                            | Orlando     | Completado  |
 
 ---
 
